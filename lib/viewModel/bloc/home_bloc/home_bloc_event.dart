@@ -14,3 +14,12 @@ class StartServiceEvent extends HomeBlocEvent {
   @override
   List<Object> get props => [];
 }
+
+// Overlay permission result event
+class OverlayPermissionResultEvent extends HomeBlocEvent {
+  final bool isGranted;
+  const OverlayPermissionResultEvent({required this.isGranted});
+
+  @override
+  List<Object> get props => [isGranted];
+}

@@ -1,15 +1,16 @@
 part of 'home_bloc_bloc.dart';
 
 class HomeBlocState extends Equatable {
-  final bool isServiceRunning;
-  const HomeBlocState({this.isServiceRunning = false});
+  final bool isOverlayPermissionGranted;
+  const HomeBlocState({this.isOverlayPermissionGranted = false});
 
-  HomeBlocState copyWith({bool? isServiceRunning}) {
+  HomeBlocState copyWith({bool? isOverlayPermissionGranted}) {
     return HomeBlocState(
-      isServiceRunning: isServiceRunning ?? this.isServiceRunning,
+      isOverlayPermissionGranted:
+          isOverlayPermissionGranted ?? this.isOverlayPermissionGranted,
     );
   }
 
   @override
-  List<Object> get props => [isServiceRunning];
+  List<Object> get props => [isOverlayPermissionGranted];
 }
